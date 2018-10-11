@@ -26,7 +26,8 @@ public class GameTest {
 
     @Test
     public void player2Wins(){
-        game.turn();
-        assertEquals("Player 2", game.getWinner());
+        assertEquals("Player 2", game.turn());
     }
+
+
 }

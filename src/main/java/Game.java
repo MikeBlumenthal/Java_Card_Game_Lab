@@ -11,7 +11,7 @@ public class Game {
         this.playerCount = playerCount;
         this.players = new ArrayList<>();
         this.deck = new Deck();
-        this.winner = "No turns yet";
+        this.winner = "Player 1";
         deck.populate();
         this.populate();
 //        deck.shuffle();
@@ -33,7 +33,7 @@ public class Game {
         return players;
     }
 
-    public void turn() {
+    public String turn() {
         for (Player player : players
              ) {
             deck.dealToPlayer(player);
@@ -43,10 +43,13 @@ public class Game {
         for (Player player : players
              ) {
             if(player.getHandValue() > leader.getHandValue()){
-                leader = player;
+                winner = "Player 2";
+            } else if(player.getHandValue() == leader.getHandValue()){
+                winner = "It's a draw!";
             }
         }
-        winner = leader.getName();
+
+        return getWinner();
     }
 
     public String getWinner() {
