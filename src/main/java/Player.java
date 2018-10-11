@@ -13,7 +13,15 @@ public class Player {
         return hand;
     }
 
+    public int getHandValue(){
+        return hand.get(0).getCardValue();
+    }
+
     public int cardCount() {
         return hand.size();
+    }
+
+    public String getName() {
+        return name;
     }
 }

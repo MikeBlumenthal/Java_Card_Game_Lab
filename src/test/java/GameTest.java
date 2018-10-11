@@ -23,4 +23,10 @@ public class GameTest {
         assertEquals(1, game.getPlayers().get(0).cardCount());
         assertEquals(1, game.getPlayers().get(1).cardCount());
     }
+
+    @Test
+    public void player2Wins(){
+        game.turn();
+        assertEquals("Player 2", game.getWinner());
+    }
 }
