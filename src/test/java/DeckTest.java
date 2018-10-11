@@ -21,4 +21,10 @@ public class DeckTest {
         deck.populate();
         assertEquals(52, deck.getCards().size());
     }
+
+    @Test
+    public void shuffleTest(){
+        deck.populate();
+        deck.shuffle();
+    }
 }
