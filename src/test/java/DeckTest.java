@@ -22,9 +22,16 @@ public class DeckTest {
         assertEquals(52, deck.getCards().size());
     }
 
+//    @Test
+//    public void shuffleTest(){
+//        deck.populate();
+//        deck.shuffle();
+//    }
+
     @Test
-    public void shuffleTest(){
+    public void dealDeckLoses1Card(){
         deck.populate();
-        deck.shuffle();
+        deck.deal();
+        assertEquals(51, deck.getCards().size());
     }
 }
