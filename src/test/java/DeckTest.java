@@ -31,14 +31,14 @@ public class DeckTest {
     @Test
     public void dealDeckLoses1Card(){
         deck.populate();
-        deck.deal();
+        deck.dealOneCard();
         assertEquals(51, deck.getCards().size());
     }
 
     @Test
     public void dealGives2Hearts(){
         deck.populate();
-        Card card = deck.deal();
+        Card card = deck.dealOneCard();
         assertEquals(Rank.TWO, card.getRank());
         assertEquals(Suit.HEARTS, card.getSuit());
     }
