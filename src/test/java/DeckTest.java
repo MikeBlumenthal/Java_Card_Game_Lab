@@ -15,4 +15,10 @@ public class DeckTest {
     public void deckExists(){
         assertEquals(0, deck.getCards().size());
     }
+
+    @Test
+    public void deckPopulates(){
+        deck.populate();
+        assertEquals(52, deck.getCards().size());
+    }
 }
