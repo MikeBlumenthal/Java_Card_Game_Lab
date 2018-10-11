@@ -14,4 +14,8 @@ public class Card {
     public Suit getSuit() {
         return suit;
     }
+
+    public int getCardValue() {
+        return rank.getValue();
+    }
 }

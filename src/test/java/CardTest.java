@@ -22,5 +22,9 @@ public class CardTest {
         assertEquals(Suit.SPADES, card.getSuit());
     }
 
+    @Test
+    public void aceCardHasValue14(){
+        assertEquals(14, card.getCardValue());
+    }
 
 }
