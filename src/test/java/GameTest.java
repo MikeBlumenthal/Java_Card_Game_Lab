@@ -16,4 +16,11 @@ public class GameTest {
         assertEquals(2, game.getPlayerCount());
         assertEquals(2, game.getPlayers().size());
     }
+
+    @Test
+    public void playersHaveCards(){
+        game.turn();
+        assertEquals(1, game.getPlayers().get(0).cardCount());
+        assertEquals(1, game.getPlayers().get(1).cardCount());
+    }
 }

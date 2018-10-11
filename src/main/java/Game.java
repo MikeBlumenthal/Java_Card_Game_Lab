@@ -30,4 +30,11 @@ public class Game {
     public ArrayList<Player> getPlayers() {
         return players;
     }
+
+    public void turn() {
+        for (Player player : players
+             ) {
+            deck.dealToPlayer(player);
+        }
+    }
 }
