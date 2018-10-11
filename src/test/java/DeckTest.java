@@ -34,4 +34,12 @@ public class DeckTest {
         deck.deal();
         assertEquals(51, deck.getCards().size());
     }
+
+    @Test
+    public void dealGives2Hearts(){
+        deck.populate();
+        Card card = deck.deal();
+        assertEquals(Rank.TWO, card.getRank());
+        assertEquals(Suit.HEARTS, card.getSuit());
+    }
 }
